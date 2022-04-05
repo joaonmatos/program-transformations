@@ -12,15 +12,7 @@ double funky_function(double a, double b, double magic_number, unsigned int fact
     }
 
     // we want a big number so we divide/mutliply by b accordingly
-    double c;
-    if (b > 1.0 || b < -1.0)
-    {
-        c = a * b;
-    }
-    else
-    {
-        c = a / b;
-    }
+    double c = (b > 1.0 || b < -1.0) ? a * b : a / b;
 
     double acc = 1.0;
     for (unsigned int i = 0; i < factor; i++)
